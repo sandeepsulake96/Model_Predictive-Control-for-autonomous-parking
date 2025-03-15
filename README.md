@@ -1,2 +1,3 @@
-# Model_Predictive-Control-for-autonomous-parking
-This repository contains python code to implement MPC for autonomous parking and collision avoidance scenarios.
+# Autonomous Robots: Model Predictive Control
+
+Course link: www.udemy.com/course/model-predictive-control/
