@@ -12,7 +12,7 @@ class ModelPredictiveControl:
         knob_temp = knob_angle * 0.5
         # Calculate dT or change in temperature.
         tau = 6
-        dT = 0
+        dT = (knob_temp-prev_temp)/tau;
         # new temp = current temp + change in temp.
         return prev_temp + dT 
 
@@ -21,6 +21,8 @@ class ModelPredictiveControl:
         temp = 0.0
         for i in range(0, self.horizon):
             temp = self.plant_model(u[i], temp)
+            cost += abs(temp-40);
+
 
         return cost
 
@@ -72,7 +74,7 @@ plt.subplot(212)
 plt.ylabel("Water Temp")
 # Enter Data
 plt.plot(t_list, water_temp_list, 'ro')
-plt.ylim(0,50)
+plt.ylim(0,90)
 plt.show()
 
 # --------------------------

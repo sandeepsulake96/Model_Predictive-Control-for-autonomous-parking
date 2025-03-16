@@ -18,7 +18,7 @@ class Run:
         y_t = current_state[1] # Y Location [m]
         psi_t = current_state[2] # Angle [rad]
         v_t = current_state[3] # Speed [m/s]
-        pedal = 0 # Max: 5, Min: -5
+        pedal = 2 # Max: 5, Min: -5
         steering = 0 # Max; 0.8, Min: -0.8
 
         return [pedal, steering]

@@ -165,7 +165,7 @@ def sim_run(options, MPC):
             telem[0] = state_i[num,0]+1
 
 
-        return patch_car, time_text
+        return patch_car, patch_goal, predict, wheel_1, wheel_2, wheel_3, throttle, brake, speed_text
 
 
     print("Compute Time: ", round(time.process_time() - start, 3), "seconds.")
